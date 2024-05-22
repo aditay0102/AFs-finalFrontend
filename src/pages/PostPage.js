@@ -13,7 +13,7 @@ export default function PostPage() {
   const navigate = useNavigate();
   
   useEffect(() => {
-    fetch(`http://localhost:4000/post/${id}`)
+    fetch(`https://afs-final-backend.vercel.app/post/${id}`)
     .then((response) => { 
       response.json().then((postInfo) => {
         setPostInfo(postInfo);
@@ -24,7 +24,7 @@ export default function PostPage() {
   
   const handleDelete = async () => {
     try {
-      await fetch(`http://localhost:4000/post/${id}`, {
+      await fetch(`https://afs-final-backend.vercel.app/post/${id}`, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -55,7 +55,7 @@ export default function PostPage() {
         </div>
       )}
       <div id="postimage">
-        <img id='postimg' src={`http://localhost:4000/${postInfo.cover}`} alt="" />
+        <img id='postimg' src={`https://afs-final-backend.vercel.app/${postInfo.cover}`} alt="" />
       </div>
       <div
         className="content"

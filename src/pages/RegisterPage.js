@@ -7,7 +7,7 @@ export default function RegisterPage() {
   const navigate = useNavigate();
   async function register(ev) {
     ev.preventDefault();
-    const response = await fetch('http://localhost:4000/register', {
+    const response = await fetch('https://afs-final-backend.vercel.app/register', {
       method: 'POST',
       body: JSON.stringify({username,password}),
       headers: {'Content-Type':'application/json'},
